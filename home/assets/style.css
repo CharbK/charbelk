@@ -1,0 +1,46 @@
+body {
+    background-color: gray;
+    margin: 0px;
+}
+
+#hello {
+
+    text-align: center;
+    font-size: clamp(3rem, 8vw, 8rem);
+
+    color: white;
+    
+}
+
+.fancy {
+
+    font-family: "Lobster", cursive;
+    color: #a00e0e;
+    
+}
+
+#social-media {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.media {
+    text-decoration: none;
+    
+    color: #000000;
+    opacity: 0.5;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: "Helvatica", sans-serif;
+
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    transition: opacity 400ms;
+}
+
+.media:hover {
+    opacity: 1;
+    transform: rotate(-360deg);
+    /* Safari */-webkit-transform: rotate(-360deg);/* Firefox */-moz-transform: rotate(-360deg);/* IE */-ms-transform: rotate(-360deg);/* Opera */-o-transform: rotate(-360deg);
+    transition: 600ms;
+}
