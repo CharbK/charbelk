@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(45deg, #b54fad, #d07c62, #508395, #4d9383);
+	background-size: 800% 800%;
+	animation: gradient 6s ease infinite;
+    margin: 0px;
+}
+
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#menu-items {
+  margin-left: clamp(4rem, 20vw, 48rem);
+  position: relative;
+  z-index: 2;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+  color: #a00e0e;
+  transition: 400ms;
+}
+
+.menu-item {
+    color: #000000;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: "Helvatica", sans-serif;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 400ms;
+}
+
+#background-pattern {
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.15) 9%, 
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 8vmin 8vmin;
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, 
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100vw;
+  z-index: 1;
+}
+
+#menu-items:hover ~ #background-pattern {
+  background-size: 7vmin 7vmin;
+  opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #background-pattern {
+  background-position: 0% 25%;
+}
+
+#menu[data-active-index="1"] > #background-pattern {
+  background-position: 0% 50%;
+}
+
+#menu[data-active-index="2"] > #background-pattern {
+  background-position: 0% 75%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#background-image {
+  background-image: url("background-image.png");
+  background-position: center 40%;
+  background-size: 20vmax;
+  height: 100%;
+  left: -30%;  
+  opacity: 0.3;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#menu[data-active-index="0"] > #background-image {
+  background-position: center 30%;
+}
+
+#menu[data-active-index="1"] > #background-image {
+  background-position: center 60%;
+}
+
+#menu[data-active-index="2"] > #background-image {
+  background-position: center 90%;
+}
