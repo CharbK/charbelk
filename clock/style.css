@@ -1,0 +1,70 @@
+html {
+
+	color: white;
+
+	font-family: Helvetica;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+body {
+	margin: 0;
+ 	padding: 0;
+}
+
+#bg {
+
+	height: 100vh;
+	width: 100vw;
+	
+	z-index: 0;
+}
+
+#time {
+
+    position: absolute;
+    left: 15vw;
+    top: calc(40vh - 10vw);
+
+    font-size: 25vw;
+	text-shadow: 0 0 20px white;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+}
+
+#seconds {
+
+    font-size: 10vw;
+	text-shadow: 0 0 20px white;
+
+    position: absolute;
+    top: 40vh;
+    left: 80vw;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+}
+
+#date {
+
+	font-size: 5vw;
+    text-shadow: 0 0 20px white;
+
+    position: absolute;
+    top: calc(45vh + 10vw);
+    left: 30vw;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
